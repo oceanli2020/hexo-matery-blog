@@ -227,14 +227,19 @@ myProjects:
   data:
     learn:
       icon: fas fa-file-alt
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      iconBackground: 'linear-gradient(to bottom right, #81C784 0%, #81C784 100%)'
       url: https://github.com/oceanli2020/learn
       desc: 基于SpringBoot+Vue+Element开发的前后端分离项目，实现视频文件上传播放、直播等功能。
     chat-wordcloud:
       icon: fas fa-database
-      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      iconBackground: 'linear-gradient(to bottom right, #EF5350 0%, #EF5350 100%)'
       url: https://github.com/oceanli2020/chat-wordcloud
       desc: 基于Electron+Vue开发的桌面程序，可分析微信、QQ聊天记录并生成词云。
+    hexo-matery-blog:
+      icon: fas fa-th-large
+      iconBackground: 'linear-gradient(to bottom right, #1e90ff 0%, #1e90ff 100%)'
+      url: https://github.com/oceanli2020/hexo-matery-blog
+      desc: 我的个性化配置过的博客主题源码，即下即用。
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
