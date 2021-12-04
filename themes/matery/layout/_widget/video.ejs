@@ -1,0 +1,67 @@
+<link
+  rel="stylesheet"
+  href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.dplayer) %>"
+/>
+<div class="video-player">
+  <% if (theme.video.showTitle) { %>
+  <div class="title center-align">
+    <i class="fas fa-video"></i>&nbsp;&nbsp;<%= theme.video.title %>
+  </div>
+  <% } %>
+  <div class="row">
+    <div class="col l8 offset-l2 m10 offset-m1 s12">
+      <!-- <div id="dplayer" class="dplayer-video" <% if (theme.video.height) { %>
+        style="height: <%- theme.video.height %>px;"<% } %>> -->
+      <div id="dplayer" class="dplayer-video">
+        <!-- <iframe
+          src="//player.bilibili.com/player.html?aid=458749413&bvid=BV1G5411H7b5&cid=285092310&page=1&high_quality=1&danmaku=0"
+          scrolling="no"
+          border="0"
+          frameborder="0"
+          framespacing="0"
+          allowfullscreen="true"
+          height="500"
+          width="100%"
+        >
+        </iframe> -->
+        <div style="position: relative; padding: 30% 45%">
+          <iframe
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+            "
+            src="//player.bilibili.com/player.html?aid=458749413&bvid=BV1G5411H7b5&cid=285092310&page=1&high_quality=1&danmaku=0"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.dplayer) %>"></script> -->
+<script>
+  $(function () {
+    new DPlayer({
+      container: document.getElementById('dplayer'),
+      autoplay: '<%- theme.video.autoplay %>' === 'true',
+      theme: '<%- theme.video.theme %>',
+      loop: '<%- theme.video.loop %>' === 'true',
+      lang: '<%- config.language %>' === 'zh-CN' ? 'zh-cn' : 'en',
+      preload: '<%- theme.video.preload %>',
+      volume: Number('<%- theme.video.volume %>'),
+      video: {
+        url: '<% if (theme.video.url) { %><%- url_for(theme.video.url) %><% } %>',
+        pic: '<% if (theme.video.pic) { %><%- url_for(theme.video.pic) %><% } %>',
+        thumbnails:
+          '<% if (theme.video.thumbnails) { %><%- url_for(theme.video.thumbnails) %><% } %>'
+      }
+    })
+  })
+</script>

@@ -1,0 +1,55 @@
+<style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 90.2vh;
+    }
+</style>
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+        <div class="row">
+            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+                <div class="brand">
+                    <div class="title center-align">
+                        404
+                    </div>
+                    <div class="description center-align">
+                        <%= page.description %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% if (theme.banner.enable) { %>
+    <script>
+        // 每天切换 banner 图.  Switch banner image every day.
+        // var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
+        var bannerUrl
+        var key = new Date().getDay()
+        switch (key) {
+            case 0: bannerUrl = 'https://i.loli.net/2021/01/06/7R8pqBJmg6QKGSx.jpg'
+                break;
+            case 1: bannerUrl = 'https://i.loli.net/2021/01/06/WzXpr9LAVBsOKEi.png'
+                break;
+            case 2: bannerUrl = 'https://i.loli.net/2021/01/06/7R8pqBJmg6QKGSx.jpg'
+                break
+            case 3: bannerUrl = 'https://i.loli.net/2021/01/06/WzXpr9LAVBsOKEi.png'
+                break
+            case 4: bannerUrl = 'https://i.loli.net/2021/01/06/7R8pqBJmg6QKGSx.jpg'
+                break
+            case 5: bannerUrl = 'https://i.loli.net/2021/01/06/WzXpr9LAVBsOKEi.png'
+                break
+            case 6: bannerUrl = 'https://i.loli.net/2021/01/06/7R8pqBJmg6QKGSx.jpg'
+                break
+            default:
+                break;
+        }
+        $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    </script>
+    <% } else { %>
+        <script>
+            var bannerUrl = 'https://i.loli.net/2021/01/06/7R8pqBJmg6QKGSx.jpg'
+            $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+        </script>
+        <% } %>

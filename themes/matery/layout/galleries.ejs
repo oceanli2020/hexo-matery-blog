@@ -1,0 +1,20 @@
+<style type="text/css">
+  /* don't remove. */
+  /* .about-cover {
+    height: 75vh;
+  } */
+</style>
+
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+  <div id="aboutme" class="container about-container">
+    <div class="card">
+      <div class="card-content">
+        <% if (theme.video.enable) { %> <%- partial('_widget/video') %> <% } %>
+        <% if (theme.myGallery && theme.myGallery.enable) { %> <%-
+        partial('_widget/my-gallery') %> <% } %>
+      </div>
+    </div>
+  </div>
+</main>
