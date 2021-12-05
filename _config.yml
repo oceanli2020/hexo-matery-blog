@@ -119,6 +119,5 @@ theme: matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/oceanli2020/oceanli2020.github.io.git
-  # repository: https://gitee.com/ocean2020/ocean2020.git
-  branch: master
+  repository:
+  branch:

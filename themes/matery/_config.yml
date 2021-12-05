@@ -341,9 +341,9 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: true
-  appId: d06QinmgVqwWtKRFMSHe9o7a-gzGzoHsz
-  appKey: blxpl3zE86CisvovRrncLphF
+  enable: false
+  appId: 
+  appKey: 
   visitor: true
   avatar: monsterid # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
@@ -351,9 +351,9 @@ valine:
   background: /medias/comment_bg.png
   enableQQ: true
   master:
-    - 59c56451d92a46d8d5feb1fc62d654f5 # md5加密后的博主邮箱
+    -  # md5加密后的博主邮箱
   friends:
-    - 6340e03292c2bcf7ad3039b7b940c967 # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    -  # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
   tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
     - 博主
     - 小伙伴
@@ -371,8 +371,8 @@ valine:
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
-  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
-  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  appId:  # Your leancloud application appid
+  appKey:  # Your leancloud application appkey
   mode: DesertsP # DesertsP or xCss
   placeholder: Write a Comment # Comment box placeholder
   math: true # Support MathJax.
@@ -382,18 +382,18 @@ minivaline:
   visitor: true # Article reading statistics.
   maxNest: 6 # Sub-comment maximum nesting depth.
   pageSize: 6 # Pagination size.
-  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
+  adminEmailMd5:  # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
   tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
     - 管理员
     - 小伙伴
     - 访客
   master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
-    - de8a7aa53d07e6b6bceb45c64027763d
+    - 
   friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
-    - b5bd5d836c7a0091aa8473e79ed4c25e
-    - adb7d1cd192658a55c0ad22a3309cecf
-    - 3ce1e6c77b4910f1871106cb30dc62b0
-    - cfce8dc43725cc14ffcd9fb4892d5bfc
+    - 
+    - 
+    - 
+    - 
   # MiniValine's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en  | zh-CN | (and many more)
